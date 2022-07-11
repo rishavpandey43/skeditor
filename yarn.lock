@@ -1574,10 +1574,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@skuad/skeditor@^0.3.18":
-  version "0.3.18"
-  resolved "https://registry.yarnpkg.com/@skuad/skeditor/-/skeditor-0.3.18.tgz#d86c5340b09106a2b722130292f42b1aef93a5ca"
-  integrity sha512-WsaZJOeLyD9noFFdBLxYcltQ+GNITF5Z43I6NbDpUh+EhrsaM5vinFEW6B6hYcBZyTYzqnDfKETpXv6DfeHnIA==
+"@skuad/skeditor@^0.3.19":
+  version "0.3.19"
+  resolved "https://registry.yarnpkg.com/@skuad/skeditor/-/skeditor-0.3.19.tgz#7db97f4dce3b495a67a5cfad7f196e373a35dca4"
+  integrity sha512-pOjat1ZLU1LtljOdC7Voh9PoHRb65nxGGjl/5gT9ua5GQ7ukhDzeBYdgiTbTpc2b0Wa5NgQ2zvQQaMHn1R1Ukw==
 
 "@surma/rollup-plugin-off-main-thread@^2.2.3":
   version "2.2.3"

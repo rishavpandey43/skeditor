@@ -1,17 +1,44 @@
-import { useState } from 'react';
-import { SkEditor } from '@skuad/skeditor';
+import { useState } from "react";
+import { SkEditor } from "@skuad/skeditor";
 
-import { _templateData, _globalPlaceholders } from './constants';
+import { _templateData, _globalPlaceholders } from "./constants";
+
+type EditorType = {
+  getData?: () => void;
+};
 
 const App = () => {
-  const [templateData, setTemplateData] = useState(_templateData);
+  const [templateData] = useState(_templateData);
+  const [editorInstance, setEditorInstance] = useState<EditorType>({});
+
+  const _getData = () => {
+    if (editorInstance.getData) {
+      console.log(editorInstance.getData());
+      alert(editorInstance.getData());
+    }
+  };
 
   return (
-    <SkEditor
-      templateData={templateData}
-      globalPlaceholders={_globalPlaceholders}
-      onChange={(value: any) => setTemplateData(value)}
-    />
+    <div style={{ height: "100vh" }}>
+      <button
+        style={{
+          margin: "20px",
+          padding: "10px 15px",
+          backgroundColor: "#184aaa",
+          color: "#fff",
+          cursor: "pointer",
+        }}
+        onClick={_getData}
+      >
+        Preview Data in alert
+      </button>
+      <div></div>
+      <SkEditor
+        templateData={templateData}
+        globalPlaceholders={_globalPlaceholders}
+        setEditorInstance={(instance: any) => setEditorInstance(instance)}
+      />
+    </div>
   );
 };
 
